@@ -16,18 +16,18 @@
 
 ## 特色
 
-- Codex pet v2：`1536 × 2288` WebP 圖集
-- 9 種標準狀態動畫
-- 16 個順時針觀看方向
-- 192 × 208 原生影格
-- 待機文字特別放大，板子「区」與對話「凶」刻意不同
-- 已通過圖集尺寸、透明背景、色邊與未使用格驗證
+- 圖集採用 Codex pet v2 格式，是一張 `1536 × 2288` 的 WebP。
+- 她有 9 種標準狀態動畫。
+- 她能朝 16 個方向觀看，方向依順時針排列。
+- 每一格的原生尺寸是 192 × 208。
+- 待機時的文字特別放大。板子上的「区」和對話裡的「凶」是刻意寫成不同的字。
+- 圖集已通過尺寸、透明背景、色邊與未使用格的驗證。
 
 ## 固定版本下載
 
-[0.1.0 安裝包與 SHA-256](https://github.com/f0909172434/deepseek-girl-codex-pet/releases/tag/v0.1.0) · [驗證、重現與還原](RELEASE.md)
+固定版本的安裝包與它的 SHA-256 放在 [0.1.0 安裝包與 SHA-256](https://github.com/f0909172434/deepseek-girl-codex-pet/releases/tag/v0.1.0)。如何驗證、重現與還原，寫在 [驗證、重現與還原](RELEASE.md)。
 
-`0.1.0` 是分發版本；pet v2 是動畫格式。
+`0.1.0` 是分發版本的編號，pet v2 則是動畫格式的名稱，兩者不是同一件事。
 
 ## 安裝
 
@@ -43,13 +43,13 @@ powershell -ExecutionPolicy Bypass -File .\scripts\install.ps1
 
 ### 手動安裝
 
-將 `pet` 資料夾完整複製到：
+把整個 `pet` 資料夾複製到下面這個位置：
 
 ```text
 %USERPROFILE%\.codex\pets\deepseek-girl-codex-pet
 ```
 
-最終結構應為：
+複製完成後，結構應該是這樣：
 
 ```text
 .codex/
@@ -59,7 +59,7 @@ powershell -ExecutionPolicy Bypass -File .\scripts\install.ps1
       └─ spritesheet.webp
 ```
 
-> OpenAI 官方文件目前沒有公開說明自訂 Codex pet 的安裝介面；以上是本專案驗證過的 Codex Desktop 本機安裝方式，未來版本可能調整路徑或重新載入方式。
+> OpenAI 官方文件目前沒有公開說明自訂 Codex pet 的安裝介面。以上是本專案驗證過的 Codex Desktop 本機安裝方式，未來的版本可能會調整路徑或重新載入的方式。
 
 ## 驗證
 
@@ -67,9 +67,9 @@ powershell -ExecutionPolicy Bypass -File .\scripts\install.ps1
 powershell -ExecutionPolicy Bypass -File .\scripts\verify.ps1
 ```
 
-驗證腳本會檢查檔案、SHA-256、`pet.json` 欄位與 WebP 尺寸。
+驗證腳本會檢查檔案是否齊全、SHA-256 是否相符、`pet.json` 的欄位，以及 WebP 的尺寸。
 
-本次公開套件的完整 v2 驗證結果保存在 [`qa/atlas-validation.json`](qa/atlas-validation.json)。
+這次公開套件的完整 v2 驗證結果，保存在 [`qa/atlas-validation.json`](qa/atlas-validation.json)。
 
 ## 圖集規格
 
@@ -86,7 +86,7 @@ powershell -ExecutionPolicy Bypass -File .\scripts\verify.ps1
 | 8 | 審查中 |
 | 9–10 | 16 個觀看方向 |
 
-完整圖集 QA 總覽請看 [`assets/contact-sheet.png`](assets/contact-sheet.png)。
+整張圖集的 QA 總覽在 [`assets/contact-sheet.png`](assets/contact-sheet.png)。
 
 ## 授權與聲明
 
@@ -96,6 +96,6 @@ powershell -ExecutionPolicy Bypass -File .\scripts\verify.ps1
 
 ## 共用圖集維護
 
-此 repository 的 `pet/spritesheet.webp` 是 DeepSeek Girl 兩個 host 的圖集維護來源。[DeepSeek Harness adapter](https://github.com/f0909172434/dsh-deepseek-girl-pet) 以完整 commit、SHA-256 與大小固定來源，保留本機副本，並提供可重跑的同步工具。圖集只在此修改與執行 QA；Harness 的 adapter、套件與安裝網址獨立保留。
+DeepSeek Girl 目前支援兩個 host，而這個 repository 的 `pet/spritesheet.webp` 是兩者共用圖集的維護來源。[DeepSeek Harness adapter](https://github.com/f0909172434/dsh-deepseek-girl-pet) 用完整的 commit、SHA-256 與檔案大小記下它取用的是哪一份圖集，在自己的 repo 裡保留一份副本，並提供可以重跑的同步工具。圖集只在這裡修改與執行 QA。Harness 的 adapter、套件與安裝網址則各自獨立維護。
 
-既有 v0.1.0 release 與安裝包保持不變；來源治理更新不改寫過去的發布證據。
+既有的 v0.1.0 release 與安裝包保持不變。這次調整的是圖集來源的管理方式，不會改寫過去發布時留下的紀錄。
