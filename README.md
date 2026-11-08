@@ -25,7 +25,7 @@
 
 ## 固定版本下載
 
-固定版本的安裝包與它的 SHA-256 放在 [0.1.0 安裝包與 SHA-256](https://github.com/f0909172434/deepseek-girl-codex-pet/releases/tag/v0.1.0)。如何驗證、重現與還原，寫在 [驗證、重現與還原](RELEASE.md)。
+固定版本的安裝包與它的 SHA-256 放在 [0.1.0 安裝包與 SHA-256](https://github.com/Chih-Kai-Wang/deepseek-girl-codex-pet/releases/tag/v0.1.0)。如何驗證、重現與還原，寫在 [驗證、重現與還原](RELEASE.md)。
 
 `0.1.0` 是分發版本的編號，pet v2 則是動畫格式的名稱，兩者不是同一件事。
 
@@ -34,7 +34,7 @@
 ### 一鍵安裝（Windows PowerShell）
 
 ```powershell
-git clone https://github.com/f0909172434/deepseek-girl-codex-pet.git
+git clone https://github.com/Chih-Kai-Wang/deepseek-girl-codex-pet.git
 cd deepseek-girl-codex-pet
 powershell -ExecutionPolicy Bypass -File .\scripts\install.ps1
 ```
@@ -96,6 +96,6 @@ powershell -ExecutionPolicy Bypass -File .\scripts\verify.ps1
 
 ## 共用圖集維護
 
-DeepSeek Girl 目前支援兩個 host，而這個 repository 的 `pet/spritesheet.webp` 是兩者共用圖集的維護來源。[DeepSeek Harness adapter](https://github.com/f0909172434/dsh-deepseek-girl-pet) 用完整的 commit、SHA-256 與檔案大小記下它取用的是哪一份圖集，在自己的 repo 裡保留一份副本，並提供可以重跑的同步工具。圖集只在這裡修改與執行 QA。Harness 的 adapter、套件與安裝網址則各自獨立維護。
+DeepSeek Girl 目前支援兩個 host，而這個 repository 的 `pet/spritesheet.webp` 是兩者共用圖集的維護來源。[DeepSeek Harness adapter](https://github.com/Chih-Kai-Wang/dsh-deepseek-girl-pet) 用完整的 commit、SHA-256 與檔案大小記下它取用的是哪一份圖集，在自己的 repo 裡保留一份副本，並提供可以重跑的同步工具。圖集只在這裡修改與執行 QA。Harness 的 adapter、套件與安裝網址則各自獨立維護。
 
 既有的 v0.1.0 release 與安裝包保持不變。這次調整的是圖集來源的管理方式，不會改寫過去發布時留下的紀錄。

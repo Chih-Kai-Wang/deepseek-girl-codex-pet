@@ -2,7 +2,7 @@
 
 分發版本是 **0.1.0**；`spriteVersionNumber: 2` 是動畫格式，兩者不相等。
 
-到 [v0.1.0 release](https://github.com/f0909172434/deepseek-girl-codex-pet/releases/tag/v0.1.0)
+到 [v0.1.0 release](https://github.com/Chih-Kai-Wang/deepseek-girl-codex-pet/releases/tag/v0.1.0)
 下載 ZIP 與同頁的 `SHA256SUMS`。解壓前執行：
 
 ```powershell
